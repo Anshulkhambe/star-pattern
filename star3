@@ -1,0 +1,40 @@
+Write a program which contains a function which accepts number n and prints n lines as per below:
+(Considering n = 4)
+
+   *
+  *
+ *
+*
+
+package com.code.reverse;
+
+import java.util.Scanner;
+
+public class star3 {
+	public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Enter the number of lines for the diagonal star pattern: ");
+        int n = scanner.nextInt(); // Read user input
+        
+        printDiagonalPattern(n);
+        
+        scanner.close(); // Close the scanner
+    }
+
+    public static void printDiagonalPattern(int n) {
+        for (int i = 0; i < n; i++) {
+            // Print leading spaces
+        	//only logics changes for reverse diagonal star pattern 
+            for (int j = 0; j < n - i - 1; j++) {
+                System.out.print(" ");
+            }
+            // Print the star
+            System.out.println("*");
+        }
+    }
+}
+
+
+
+
